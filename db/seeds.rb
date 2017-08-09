@@ -21,43 +21,43 @@ restaurants_attributes = [
     name:         "La truffière",
     address:      "4 rue Blainville 75005 Paris",
     phone_number: "0632223278",
-    stars:        "japanese"
+    category:     "japanese"
   },
   {
     name:         "Le pré catelan",
     address:      "route de Suresnes 75016 Paris",
     phone_number: "0632223278",
-    stars:        "french"
+    category:     "french"
   },
   {
     name:         "Pizza Nico",
     address:      "Quai des Chartrons 330000 Bordeaux",
     phone_number: "0632223278",
-    stars:        "belgian"
+    category:     "belgian"
   },
   {
     name:         "Fouquets",
     address:      "Champs-Elysées 75016 Paris",
     phone_number: "0632223278",
-    stars:        "italian"
+    category:     "italian"
   }
 ]
 
 reviews_attributes = [
   {
-    content:      "Pas foufou",
-    rating:       1,
-    restaurant:   "234444"
+    content:       "Pas foufou",
+    rating:        1,
+    restaurant_id: 1
   },
   {
-    content:      "Pas foufou",
-    rating:       3,
-    restaurant:   "234444"
+    content:       "Pas foufou",
+    rating:        3,
+    restaurant_id: 2
   },
   {
-    content:      "Pas foufou",
-    rating:       4,
-    restaurant:   "234444"
+    content:       "Pas foufou",
+    rating:        4,
+    restaurant_id: 3
   }
 ]
 Restaurant.create!(restaurants_attributes)

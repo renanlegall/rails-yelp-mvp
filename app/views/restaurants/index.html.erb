@@ -1,18 +1,25 @@
-<h1>Liste des restaurants</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="card">
+      <h1>Liste des restaurants</h1>
 
-<%= link_to 'Ajouter un restaurant', new_restaurant_path %>
+        <% @restaurants.each do |restaurant| %>
+        <div>
+          <p><%= restaurant.name %></p>
+          <p><%= restaurant.address %></p>
+          <p><%= restaurant.phone_number %></p>
+          <p><%= restaurant.category %></p>
+          <%= link_to 'Allez voir le resto', restaurant_path(restaurant), class: "btn btn-success" %>
+          <%= link_to 'Supprimer le resto', restaurant_path(restaurant), method: :delete, data: {confirm: "Are you sure ?"}, class: "btn btn-danger" %>
+        </div>
 
-<% @restaurants.each do |restaurant| %>
-<div>
-  <p><%= restaurant.name %></p>
-  <p><%= restaurant.address %></p>
-  <p><%= restaurant.phone_number %></p>
-  p><%= restaurant.category %></p>
-  <%= link_to 'Allez voir le resto', restaurant_path(restaurant) %>
-  <%= link_to 'Supprimer le resto', restaurant_path(restaurant), method: :delete, data: {confirm: "Are you sure ?"} %>
+        <% end %>
+        </div>
+    </div>
+  </div>`
 </div>
 
-<% end %>
 
 
 

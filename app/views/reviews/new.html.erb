@@ -1,8 +1,13 @@
-<h2>Ajouter des Reviews</h2>
+<div class="container">
 
-<%= simple_form_for [@restaurant, @review] do |f| %>
-  <%= f.input :content %>
-  <%= f.input :rating %>
-  <%= f.input :restaurant %>
-  <%= f.submit "add a review", class: "btn btn-primary" %>
-<% end %>
+  <h1>Ajouter des Reviews</h1>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <%= simple_form_for [@restaurant, @review] do |f| %>
+      <%= f.input :content %>
+      <%= f.input :rating, collection: 0..5 %>
+      <%= f.submit "add a review", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
