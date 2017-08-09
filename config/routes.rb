@@ -9,8 +9,5 @@ Rails.application.routes.draw do
       end
       resources :reviews, shallow: :true
     end
-    namespace :admin do
-      resources :restaurants, only: :index
-    end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
